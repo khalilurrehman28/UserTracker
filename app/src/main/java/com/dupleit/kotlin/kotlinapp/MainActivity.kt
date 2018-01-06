@@ -1,6 +1,6 @@
 package com.dupleit.kotlin.kotlinapp
 
-import android.Manifest
+import  android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.support.v7.app.AppCompatActivity
