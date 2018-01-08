@@ -1,6 +1,6 @@
 package com.dupleit.kotlin.kotlinapp
 
-import  android.Manifest
+import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.support.v7.app.AppCompatActivity
@@ -9,7 +9,9 @@ import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AlertDialog
 import android.util.Log
+import android.widget.Toast
 import com.dupleit.kotlin.kotlinapp.BackgroundService.UserlocationUpdateService
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private val TAG = "PermissionDemo"
@@ -18,7 +20,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        checkPermissionRun()
+
+
+        startTrack.setOnClickListener({v->
+            checkPermissionRun()
+        })
+
+        StopTrack.setOnClickListener { v->stopService() }
     }
 
     private fun checkPermissionRun() {
@@ -33,6 +41,14 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(applicationContext, UserlocationUpdateService::class.java)
         if (applicationContext != null) {
             applicationContext.startService(intent)
+        }
+    }
+
+    private fun stopService() {
+        Toast.makeText(this,"Tracking Stop ",Toast.LENGTH_LONG).show()
+        val intent = Intent(applicationContext, UserlocationUpdateService::class.java)
+        if (applicationContext != null) {
+            applicationContext.stopService(intent)
         }
     }
 
