@@ -45,7 +45,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun stopService() {
-        Toast.makeText(this,"Tracking Stop ",Toast.LENGTH_LONG).show()
         val intent = Intent(applicationContext, UserlocationUpdateService::class.java)
         if (applicationContext != null) {
             applicationContext.stopService(intent)

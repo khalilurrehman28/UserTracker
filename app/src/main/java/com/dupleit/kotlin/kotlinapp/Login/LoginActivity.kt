@@ -18,6 +18,8 @@ class LoginActivity : AppCompatActivity() {
         presenter = LoginPresenter()
         presenter.initializeCallback(this)
 
+        presenter.checkLoginUser()
+
         email_sign_in_button.setOnClickListener({ v -> presenter.testandregister(email,password) })
 
 

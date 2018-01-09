@@ -1,15 +1,12 @@
 package com.dupleit.kotlin.kotlinapp.Login
 
-import android.content.ClipData.newIntent
 import android.content.Context
 import android.content.Intent
-import android.support.v4.content.ContextCompat.startActivity
 import android.widget.AutoCompleteTextView
 import android.widget.EditText
 import com.dupleit.kotlin.kotlinapp.MainActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.OnFailureListener
-import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import java.util.regex.Pattern
 
@@ -17,6 +14,8 @@ import java.util.regex.Pattern
  * Created by android on 8/1/18.
  */
 class LoginPresenter : LoginCallback {
+
+
     var context: Context? = null
     lateinit var fbAuth: FirebaseAuth
 
@@ -37,6 +36,13 @@ class LoginPresenter : LoginCallback {
             return
         }else{
             registerUser(email?.text.toString(),password?.text.toString())
+        }
+    }
+
+    override fun checkLoginUser() {
+        if (fbAuth.currentUser!!.uid.isNotEmpty()){
+            val intent: Intent = Intent(context, MainActivity::class.java)
+            context?.startActivity(intent)
         }
     }
 
@@ -66,6 +72,4 @@ class LoginPresenter : LoginCallback {
                         + "([a-zA-Z]+[\\w-]+\\.)+[a-zA-Z]{2,4})$"
         ).matcher(email).matches()
     }
-
-
 }
