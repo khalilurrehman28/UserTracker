@@ -40,9 +40,11 @@ class LoginPresenter : LoginCallback {
     }
 
     override fun checkLoginUser() {
-        if (fbAuth.currentUser!!.uid.isNotEmpty()){
-            val intent: Intent = Intent(context, MainActivity::class.java)
-            context?.startActivity(intent)
+        if(fbAuth.currentUser!=null){
+            if (fbAuth.currentUser!!.uid.isNotEmpty()){
+                val intent: Intent = Intent(context, MainActivity::class.java)
+                context?.startActivity(intent)
+            }
         }
     }
 
