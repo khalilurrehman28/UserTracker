@@ -8,6 +8,6 @@ import android.widget.EditText
  */
 interface LoginCallback {
     fun initializeCallback(loginActivity: LoginActivity)
-    fun testandregister(email: AutoCompleteTextView?, password: EditText?)
+    fun testandregister(userEmail: EditText?, userPassword: EditText?)
     fun checkLoginUser()
 }

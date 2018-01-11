@@ -16,4 +16,5 @@
     </string>
     <string name="StopTracking">Stop Tracking</string>
     <string name="StartTracking">Start Tracking</string>
+    <string name="wrongemail">Wrong Email</string>
 </resources>

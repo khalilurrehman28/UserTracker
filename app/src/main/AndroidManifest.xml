@@ -24,14 +24,21 @@
 
         <activity
             android:name=".Login.LoginActivity"
-            android:label="@string/title_activity_login">
+            android:theme="@style/AppFullScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".userHistoryList.userHistoryList"></activity>
+        <activity android:name=".userHistoryList.userHistoryList" />
+        <activity
+            android:name=".Register.RegisterActivity"
+            android:theme="@style/AppFullScreenTheme" >
+
+        </activity>
+        <activity android:name=".login2"
+            android:theme="@style/AppFullScreenTheme"></activity>
     </application>
 
 </manifest>
