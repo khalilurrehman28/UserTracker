@@ -11,6 +11,7 @@ import android.support.v7.app.AlertDialog
 import android.util.Log
 import android.widget.Toast
 import com.dupleit.kotlin.kotlinapp.BackgroundService.UserlocationUpdateService
+import com.dupleit.kotlin.kotlinapp.userHistoryList.userHistoryList
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +28,15 @@ class MainActivity : AppCompatActivity() {
         })
 
         StopTrack.setOnClickListener { v->stopService() }
+
+        seeHistory.setOnClickListener { gotohistoryActivity() }
+    }
+
+    private fun gotohistoryActivity() {
+        val intent = Intent(applicationContext, userHistoryList::class.java)
+        if (applicationContext != null) {
+            startActivity(intent)
+        }
     }
 
     private fun checkPermissionRun() {
