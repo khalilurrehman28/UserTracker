@@ -129,7 +129,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     private fun makeRequest() {
-        ActivityCompat.requestPermissions(this,arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),RECORD_REQUEST_CODE)
+        ActivityCompat.requestPermissions(this,arrayOf(Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.ACCESS_COARSE_LOCATION),RECORD_REQUEST_CODE)
     }
 
     override fun onRequestPermissionsResult(requestCode: Int,permissions: Array<String>, grantResults: IntArray) {

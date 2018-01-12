@@ -130,8 +130,9 @@ class GPSTracker(mmContext: Context) : LocationListener {
     }
 
     override fun onLocationChanged(arg0: Location) {
-        // TODO Auto-generated method stub
-
+        //if (arg0 != null) {
+            latitude = arg0.latitude
+            longitude = arg0.longitude
     }
 
     override fun onProviderDisabled(arg0: String) {
@@ -151,8 +152,8 @@ class GPSTracker(mmContext: Context) : LocationListener {
 
     companion object {
 
-        private val MIN_DISTANCE_CHANGE_FOR_UPDATES: Long = 10 // 10 meters
-        private val MIN_TIME_BW_UPDATES = (1000 * 10 * 1).toLong() // 10 seconds
+        private val MIN_DISTANCE_CHANGE_FOR_UPDATES: Long = 2 // 10 meters
+        private val MIN_TIME_BW_UPDATES = (1000 * 5 * 1).toLong() // 10 seconds
     }
 
 

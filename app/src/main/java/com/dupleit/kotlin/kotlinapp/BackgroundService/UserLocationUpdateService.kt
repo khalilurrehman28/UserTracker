@@ -33,12 +33,9 @@ class UserlocationUpdateService : Service() {
 
     override fun onCreate() {
         super.onCreate()
-
         userPref = this.getSharedPreferences("journey",0)
-
         fbAuth = FirebaseAuth.getInstance()
         mDatabase = FirebaseDatabase.getInstance().reference
-
         mMessageReference = FirebaseDatabase.getInstance().getReference(fbAuth.currentUser?.uid).child("journey")
 
     }
@@ -80,6 +77,7 @@ class UserlocationUpdateService : Service() {
 
     private fun DriverUpdateDetails() {
         try {
+
             currentLat = java.lang.Double.toString(gpsTracker!!.getLocation()!!.latitude)
             currentLong = java.lang.Double.toString(gpsTracker!!.getLocation()!!.longitude)
             var userCount = userPref.getInt("journeyCount",1)

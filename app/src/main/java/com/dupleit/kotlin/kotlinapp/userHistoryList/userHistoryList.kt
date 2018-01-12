@@ -1,6 +1,5 @@
 package com.dupleit.kotlin.kotlinapp.userHistoryList
 import android.content.Intent
-import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -14,6 +13,7 @@ import com.dupleit.kotlin.kotlinapp.utils.RecyclerTouchListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_user_history_list.*
+
 class userHistoryList : AppCompatActivity() {
     private lateinit var linearLayoutManager: LinearLayoutManager
     lateinit var presenter:userHistoryPresenter
@@ -26,7 +26,7 @@ class userHistoryList : AppCompatActivity() {
         setContentView(R.layout.activity_user_history_list)
         var TAG: String = "userHistoryList"
         database = FirebaseDatabase.getInstance()
-        mFirebaseReference = database.getReference()
+        mFirebaseReference = database.reference
         presenter = userHistoryPresenter()
         presenter.initializeCallback(this)
         fbAuth = FirebaseAuth.getInstance()
