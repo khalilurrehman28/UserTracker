@@ -17,4 +17,7 @@
     <string name="StopTracking">Stop Tracking</string>
     <string name="StartTracking">Start Tracking</string>
     <string name="wrongemail">Wrong Email</string>
+    <string name="SecActivity">SecActivity</string>
+    <string name="title_activity_maps">Map</string>
+
 </resources>

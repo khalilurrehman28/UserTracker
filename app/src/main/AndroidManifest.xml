@@ -34,9 +34,15 @@
         <activity android:name=".userHistoryList.userHistoryList" />
         <activity
             android:name=".Register.RegisterActivity"
-            android:theme="@style/AppFullScreenTheme" >
+            android:theme="@style/AppFullScreenTheme" />
 
-        </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".routeMap.MapsActivity"
+            android:label="@string/title_activity_maps" />
     </application>
 
 </manifest>

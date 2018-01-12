@@ -7,11 +7,9 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import com.dupleit.kotlin.kotlinapp.Login.activityCallbacks.iLoginActivityCallbacks
-import com.dupleit.kotlin.kotlinapp.MainActivity
 import com.dupleit.kotlin.kotlinapp.R
 import com.dupleit.kotlin.kotlinapp.Register.RegisterActivity
-import com.dupleit.kotlin.kotlinapp.utils.checkInternetState.context
-import kotlinx.android.synthetic.main.activity_Login.*
+import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity(),iLoginActivityCallbacks {
 
@@ -19,7 +17,7 @@ class LoginActivity : AppCompatActivity(),iLoginActivityCallbacks {
     private lateinit var snackbar: Snackbar
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_Login)
+        setContentView(R.layout.activity_login)
         val customFont = Typeface.createFromAsset(assets, "fonts/LatoLight.ttf")
         val customFont1 = Typeface.createFromAsset(assets, "fonts/LatoRegular.ttf")
         userEmail.typeface = customFont

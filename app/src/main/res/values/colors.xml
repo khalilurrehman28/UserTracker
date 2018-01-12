@@ -3,8 +3,11 @@
     <color name="colorPrimary">#119F55</color>
     <color name="colorPrimaryDark">#008000</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="red">#ff0000</color>
+    <color name="red">#e4402f</color>
     <color name="colorGreen">#008000</color>
     <color name="userColor">#bf3434</color>
     <color name="black">#000</color>
+    <color name="colorGrey">#d4d4d4</color>
+    <color name="colorWhite">#fff</color>
+
 </resources>

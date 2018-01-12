@@ -38,7 +38,7 @@ class LoginPresenter : LoginCallback {
             userPassword!!.error = "Password length is small"
             return
         }else{
-            registerUser(userEmail?.text.toString(),userPassword?.text.toString())
+            loginUser(userEmail?.text.toString(),userPassword?.text.toString())
         }
     }
 
@@ -53,7 +53,7 @@ class LoginPresenter : LoginCallback {
         }
     }
 
-    private fun registerUser(userEmail: String, userPassword: String) {
+    private fun loginUser(userEmail: String, userPassword: String) {
 
         activityLogin.showProgressbar()
         if (!checkInternetState.getInstance(context).isOnline) run {
@@ -73,7 +73,7 @@ class LoginPresenter : LoginCallback {
 
                     Log.e("firebaseUser", " already exist")
                     //Registration error
-                    activityLogin.showSnackbar("Email not exist")
+                    activityLogin.showSnackbar("Login failed")
                     activityLogin.hideProgressbar()
                 }
             }
