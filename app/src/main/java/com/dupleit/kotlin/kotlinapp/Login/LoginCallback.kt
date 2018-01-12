@@ -1,6 +1,5 @@
 package com.dupleit.kotlin.kotlinapp.Login
 
-import android.widget.AutoCompleteTextView
 import android.widget.EditText
 
 /**

@@ -37,8 +37,6 @@
             android:theme="@style/AppFullScreenTheme" >
 
         </activity>
-        <activity android:name=".login2"
-            android:theme="@style/AppFullScreenTheme"></activity>
     </application>
 
 </manifest>

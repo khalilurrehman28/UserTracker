@@ -7,7 +7,6 @@ import android.widget.EditText
 import com.dupleit.kotlin.kotlinapp.Login.LoginActivity
 import com.dupleit.kotlin.kotlinapp.R
 import com.dupleit.kotlin.kotlinapp.Register.model.userProfileModel
-import com.dupleit.kotlin.kotlinapp.login2
 import com.dupleit.kotlin.kotlinapp.utils.PreferenceManager
 import com.dupleit.kotlin.kotlinapp.utils.checkInternetState
 import com.google.android.gms.tasks.OnCompleteListener
