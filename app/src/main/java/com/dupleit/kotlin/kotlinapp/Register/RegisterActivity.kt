@@ -7,8 +7,10 @@ import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.view.View
 import com.dupleit.kotlin.kotlinapp.Login.LoginActivity
+import com.dupleit.kotlin.kotlinapp.MainActivity
 import com.dupleit.kotlin.kotlinapp.R
 import com.dupleit.kotlin.kotlinapp.Register.activityCallbacks.iActivityCallbacks
+import com.dupleit.kotlin.kotlinapp.utils.checkInternetState.context
 import kotlinx.android.synthetic.main.activity_register.*
 
 
@@ -35,7 +37,10 @@ class RegisterActivity : AppCompatActivity(), iActivityCallbacks {
         }
 
         alreadyAccount.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+            val i = Intent(this, LoginActivity::class.java)
+            i.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+            startActivity(i)
+            finish()
         }
 
     }
